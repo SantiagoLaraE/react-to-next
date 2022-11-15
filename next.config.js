@@ -2,21 +2,22 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    customKey: 'customValue'
+    customKey: 'customValue',
   },
   compress: true,
-  async redirects(){
+  async redirects() {
     return [
       {
         source: '/hola',
         destination: '/hello',
         permanent: true,
-      }
-    ]
+      },
+    ];
   },
   images: {
-    domains: ['api.lorem.space', 'http2.mlstatic.com', 'placeimg.com']
-  }
-}
+    domains: ['api.lorem.space', 'http2.mlstatic.com', 'placeimg.com', 'images.pexels.com'],
+  },
+  extends: ['plugin:@next/next/recommended'],
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
