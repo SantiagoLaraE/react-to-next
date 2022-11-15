@@ -14,10 +14,10 @@ const OrderItem = ({ product }) => {
 	return (
 		<div className={styles.OrderItem}>
 			<figure>
-				<Image src={product.images[0]} alt={product.title} />
+				<Image loader={()=> product?.images[0]} src={product?.images[0]} alt={product?.title} width="640" height="480" />
 			</figure>
-			<p>{product.title}</p>
-			<p>${product.price}</p>
+			<p>{product?.title}</p>
+			<p>${product?.price}</p>
 			<Image src={close} alt="close" onClick={() => handleRemove(product)} />
 		</div>
 	);

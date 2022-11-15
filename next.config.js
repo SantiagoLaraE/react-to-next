@@ -13,6 +13,9 @@ const nextConfig = {
         permanent: true,
       }
     ]
+  },
+  images: {
+    domains: ['api.lorem.space', 'http2.mlstatic.com', 'placeimg.com']
   }
 }
 
