@@ -1,9 +1,9 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
+
 const nextConfig = {
   reactStrictMode: true,
-  env: {
-    customKey: 'customValue',
-  },
   compress: true,
   async redirects() {
     return [
@@ -16,7 +16,13 @@ const nextConfig = {
   },
   images: {
     domains: ['api.lorem.space', 'http2.mlstatic.com', 'placeimg.com', 'images.pexels.com'],
-  }
+  },
 };
 
-module.exports = nextConfig;
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  disable: process.env.NODE_ENV === 'development',
+});
+
+module.exports = withPWA(nextConfig);
