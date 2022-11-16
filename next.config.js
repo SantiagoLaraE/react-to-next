@@ -16,8 +16,7 @@ const nextConfig = {
   },
   images: {
     domains: ['api.lorem.space', 'http2.mlstatic.com', 'placeimg.com', 'images.pexels.com'],
-  },
-  extends: ['plugin:@next/next/recommended'],
+  }
 };
 
 module.exports = nextConfig;

@@ -46,9 +46,15 @@
   color: $--very-light-pink;
   font-size: $--sm;
   margin-right: 12px;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
 }
 .navbar-shopping-cart {
   position: relative;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
 }
 .navbar-shopping-cart div {
   width: 16px;
